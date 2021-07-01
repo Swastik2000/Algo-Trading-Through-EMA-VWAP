@@ -1,7 +1,10 @@
+// Created By Swastik Mishra
+// Ideal For 15 Mins, Bank Nifty Futures
+
 //@version=4
 
 
-study(title="mainScript", shorttitle="mainScript", overlay=true, resolution="")
+strategy(title="mainScript", shorttitle="mainScript", overlay=true)
 
 // Script For VWAP
 computeVWAP(src, isNewPeriod, stDevMultiplier) =>
@@ -65,11 +68,11 @@ if not (hideonDWM and timeframe.isdwm)
     lowerBandValue := showBands ? bottom : na
 
 // VWAPplot = plot(vwapValue, title="VWAP", offset=offset)
+
 VWAPplot = vwapValue
 
 // upperBand = plot(upperBandValue, title="Upper Band", color=color.green, offset=offset)
 // lowerBand = plot(lowerBandValue, title="Lower Band", color=color.green, offset=offset)
-
 // fill(upperBand, lowerBand, title="Bands Fill", color= showBands ? color.new(color.green, 95) : na)
 
 // Script for MAE 
@@ -77,24 +80,30 @@ lenMAE = input(9, minval=1, title="Length")
 srcMAE = input(close, title="Source")
 offsetMAE = input(title="Offset", type=input.integer, defval=0, minval=-500, maxval=500)
 outMAE = ema(srcMAE, lenMAE)
+
 // MAEplot = plot(outMAE, title="EMA", color=color.blue, offset=offset)
+
 MAEplot = outMAE
 
-// Code for cross-over
+// LOGIC
 // VWAP is Stationary and MAE is variable 
 // MAE cross over VWAP Buy
 // MAE cross under VWAP sell
 
+// Code for cross-over
 longCondition = crossover(MAEplot, VWAPplot)
-if (longCondition)
-    strategy.entry("Long Entry", strategy.long)
 shortCondition = crossunder(MAEplot, VWAPplot)
-if (shortCondition)
-    strategy.entry("Short Entry", strategy.short)
-
     
 longExitCondition = crossunder(MAEplot, VWAPplot)
 shortExitCondition = crossover(MAEplot, VWAPplot)
+
+
+Code for Trade Order
+if (longCondition)
+    strategy.entry("Long Entry", strategy.long)
+if (shortCondition)
+    strategy.entry("Short Entry", strategy.short)
+
 
 strategy.close("Long Closed", when = longExitCondition)
 strategy.close("Short Closed", when = shortExitCondition)
