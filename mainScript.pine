@@ -98,7 +98,7 @@ longExitCondition = crossunder(MAEplot, VWAPplot)
 shortExitCondition = crossover(MAEplot, VWAPplot)
 
 
-Code for Trade Order
+// Code for Trade Order
 if (longCondition)
     strategy.entry("Long Entry", strategy.long)
 if (shortCondition)
