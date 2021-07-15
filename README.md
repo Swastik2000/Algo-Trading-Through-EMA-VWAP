@@ -23,9 +23,11 @@ Computer program will automatically monitor the Volume-weighted average price (a
 * Python
 
 ## 4. Testing
-Tested with historical data of BankNifty Futures
-Suitable timeframe was 15 Mins
-Can be used in 30 minute timeframe
+Tested with historical data from 2021-04-30 to 2021-07-15 of BankNifty Futures.
+Suitable timeframe was 15 Mins.
+It can be used in 30 minute timeframe.
+![List of Trades](https://user-images.githubusercontent.com/11945973/125773608-26c10515-7e39-4888-92fc-486ed00f3094.png)
+
 
 ## 5. Final Results
 ### 5.1 Results
@@ -35,7 +37,6 @@ Can be used in 30 minute timeframe
 ### 5.2 Screenshot/photos
 ![Screenshot (101)](https://user-images.githubusercontent.com/11945973/125773685-1aa22ca1-e4b8-4c38-a47e-588bbd18bc36.png)
 ![Overview](https://user-images.githubusercontent.com/11945973/125773742-efd3c4dc-dc8e-4da6-9f28-742f6e28b632.png)
-![List of Trades](https://user-images.githubusercontent.com/11945973/125773608-26c10515-7e39-4888-92fc-486ed00f3094.png)
 ![Performace Summary (103)](https://user-images.githubusercontent.com/11945973/125773751-c7337ed8-c1ec-4d98-b4a2-79f6ce83fe6b.png)
 
 ## 6. Conclusion
