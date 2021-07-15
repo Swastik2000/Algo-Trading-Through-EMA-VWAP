@@ -2,11 +2,14 @@
 
 ## ~ Description
 Algorithmic trading uses a computer program that follows a defined set of instructions (an algorithm) to place a trade. This type of trading attempts to leverage the speed and computational resources of computers relative to human traders. The trade, in theory, can generate profits at a speed and frequency that is impossible for a human trader.
+
 The defined sets of instructions are based on timing, price, quantity, and mathematical model based on VWAP and EMA. Apart from profit opportunities for the trader, algo-trading renders markets more liquid and trading more systematic by ruling out the impact of human emotions on trading activities. 
 
 ## 2. About
 ### 2.1- What does our project do?
-Computer program will automatically monitor the Volume-weighted average price (and the exponential moving average indicators) and place the buy and sell orders when the defined conditions are met. The trader no longer needs to monitor live prices and graphs or put in the orders manually. The algorithmic trading system does this automatically by correctly identifying the trading opportunity. 
+Computer program will automatically monitor the Volume-weighted average price (and the exponential moving average indicators) and place the buy and sell orders when the defined conditions are met. 
+
+The trader no longer needs to monitor live prices and graphs or put in the orders manually. The algorithmic trading system does this automatically by correctly identifying the trading opportunity. 
 ### 2.2 What problem it solve?
 * Trades are executed at the best possible prices.
 * Trade order placement is instant and accurate (there is a high chance of execution at the desired levels).
@@ -23,9 +26,9 @@ Computer program will automatically monitor the Volume-weighted average price (a
 * Python
 
 ## 4. Testing
-Tested with historical data from 2021-04-30 to 2021-07-15 of BankNifty Futures.
-Suitable timeframe was 15 Mins.
-It can be used in 30 minute timeframe.
+* Tested with historical data from 2021-04-30 to 2021-07-15 of BankNifty Futures.
+* Suitable timeframe was 15 Mins.
+* It can be used in 30 minute timeframe.
 ![List of Trades](https://user-images.githubusercontent.com/11945973/125773608-26c10515-7e39-4888-92fc-486ed00f3094.png)
 
 
